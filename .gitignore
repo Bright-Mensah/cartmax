@@ -12,3 +12,12 @@ web-build/
 
 # macOS
 .DS_Store
+
+# ignore ALL .log files
+* .log
+
+#ignore all .lock files
+* .lock
+
+#ignore all package.json files
+package.json
