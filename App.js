@@ -16,29 +16,6 @@ import Details from "./screens/OrderScreens/Details";
 import AsyncStorage from "@react-native-async-storage/async-storage/";
 import { YellowBox } from "react-native-web";
 
-// function HomeScreen({navigation}){
-
-//   return(
-//     <View style={tw `bg-gray-900 flex-1` }>
-
-//       <Text style={tw `text-rose-500 italic text-4xl`}>Welcome to M shop</Text>
-//       <Image source={homeIcon} style={tw `w-69 h-70 mt-7 rounded-2xl`} />
-//       <TouchableOpacity onPress={()=> navigation.navigate('Login')}
-//       style={tw `bg-sky-600 pt-2 pl-30 pr-30
-//        pb-2 mt-20 ml-6 border-4
-//        border-solid border-transparent rounded-2xl`}>
-//         <Text style={tw`text-xl text-center text-white `}>Login</Text>
-//       </TouchableOpacity>
-//       <TouchableOpacity onPress={()=> navigation.navigate('SignUp')}
-//       style={tw `bg-rose-600 pt-2 pl-30 pr-30
-//        pb-2 mt-10 ml-6 border-4
-//        border-solid border-transparent rounded-2xl`}>
-//         <Text style={tw`text-xl text-center text-white`}>signUp</Text>
-//       </TouchableOpacity>
-
-//     </View>
-//   )
-// }
 
 const Stack = createNativeStackNavigator();
 

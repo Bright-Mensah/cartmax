@@ -51,8 +51,8 @@ const Home = () => {
         </TouchableOpacity>
 
         <ScrollView
-          alwaysBounceVertical={true}
-          alwaysBounceHorizontal={true}
+          alwaysBounceVertical={false}
+          alwaysBounceHorizontal={false}
           automaticallyAdjustContentInsets
           horizontal={true}
         >
