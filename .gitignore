@@ -20,4 +20,4 @@ web-build/
 * .lock
 
 #ignore all package.json files
-package.json
+*.package.json
