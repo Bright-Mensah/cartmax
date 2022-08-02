@@ -1,6 +1,6 @@
 This is an ecommerce mobile application built with React-native ( Javascript framework).
 
-The screenshot are below:
+The screens are below:
 
 # LOGIN PAGE:
 
