@@ -4,36 +4,36 @@ The screenshot are below:
 
 # LOGIN PAGE:
 
-![](screenshots/login-img.png);
+![](screenshots/login-img.png)
 
 # SIGNUP PAGE:
 
-![](screenshots/signup-img.png);
+![](screenshots/signup-img.png)
 
 # FORGOT PAGE:
 
-![](screenshots/forgotPassword-img.png);
+![](screenshots/forgotPassword-img.png)
 
 # HOME PAGE:
 
-![](screenshots/home-img.png);
+![](screenshots/home-img.png)
 
 # SETTINGS PAGE:
 
-![](screenshots/settings-img.png);
+![](screenshots/settings-img.png)
 
 # PROFILE PAGE:
 
-![](screenshots/profile-img.png);
+![](screenshots/profile-img.png)
 
 # ORDER PAGE:
 
-![](screenshots/orderDetails-img.png);
+![](screenshots/orderDetails-img.png)
 
 # ORDER DETAILS PAGE:
 
-![](screenshots/orderDetails-img.png);
+![](screenshots/orderDetails-img.png)
 
 # CATEGORIES PAGE:
 
-![](screenshots/categories-img.png);
+![](screenshots/categories-img.png)
