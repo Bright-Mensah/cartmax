@@ -10,7 +10,7 @@ The screenshot are below:
 
 ![](screenshots/signup-img.png)
 
-# FORGOT PAGE:
+# FORGOT PASSWORD  PAGE:
 
 ![](screenshots/forgotPassword-img.png)
 
