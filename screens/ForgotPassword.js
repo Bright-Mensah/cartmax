@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   Alert,
-  KeyboardAvoidingView,
 } from "react-native";
 import React, { useState } from "react";
 import tw from "twrnc";
@@ -22,109 +21,70 @@ const ForgotPassword = ({ navigation }) => {
   const [animate, setAnimate] = useState(false);
   const [email, setEmail] = useState("");
 
-  const ResetPassword = async () => {
+  const handleReset = async () => {
     setAnimate(true);
-
-    /* check if the field isnt empty
-    and if it is empty kindly prompt the user
-    to enter the email address to proceed
-    */
-
     if (email == "") {
       setAnimate(false);
       showMessage({
-        message: "Error",
-        icon: "warning",
-        description: "Provide the Email Address to proceed",
         type: "warning",
+        description: "Provide Associate Email Address",
+        icon: "warning",
         animated: "true",
+        position: "top",
+        message: "Error",
       });
     } else {
       try {
-        // go on with the password reset
         await auth.sendPasswordResetEmail(email);
-
         setAnimate(false);
-
         showMessage({
-          message: `Email sent`,
-          description: "Please check your inbox to reset your password",
           type: "success",
-          duration: "3000",
-          position: "bottom",
+          message: "Email sent",
+          description: "Please check your inbox to reset  password",
+          position: "center",
           icon: "success",
           animated: "true",
+          duration: "3000",
         });
-
-        setTimeout(() => {
-          navigation.navigate("Login");
-        }, 3000);
       } catch (error) {
-        // check if account exist
         if (error.code === "auth/user-not-found") {
-          showMessage({
-            message: `Account doesnt exist`,
-            description: `try signing up for an account`,
-            duration: "3000",
-            position: "top",
-            icon: "warning",
-            type: "warning",
-            animated: "true",
-            titleStyle: {
-              textAlign: "center",
-              fontSize: 16,
-              fontWeight: "900",
-            },
-            textStyle: {
-              color: "white",
-              textAlign: "center",
-              fontSize: 16,
-              fontWeight: "900",
-            },
-          });
-        }
-
-        // check if the email address is valid
-        if (error.code === "auth/invalid-email") {
           setAnimate(false);
           showMessage({
-            message: `The email address is invalid`,
             type: "warning",
-            duration: "3000",
-            position: "top",
             icon: "warning",
+            description: "Email does not exist",
+            position: "top",
             animated: "true",
+            message: "warning",
+          });
+        } else if (error.code === "auth/invalid-email") {
+          setAnimate(false);
+          showMessage({
+            type: "warning",
+            icon: "warning",
+            description: "Email is invalid",
+            position: "top",
+            animated: "true",
+            message: "warning",
+            duration: "4000",
           });
         }
-        //  also check if theres internet connection
         else if (error.code === "auth/network-request-failed") {
           setAnimate(false);
           showMessage({
-            message: `No Internet `,
-            description: "check your internet connection",
             type: "warning",
-            duration: "3000",
-            position: "top",
             icon: "warning",
+            description: "check your internet connection",
+            position: "top",
             animated: "true",
-            titleStyle: {
-              textAlign: "center",
-              fontSize: 16,
-              fontWeight: "900",
-            },
-            textStyle: {
-              color: "white",
-              textAlign: "center",
-              fontSize: 16,
-              fontWeight: "900",
-            },
+            message: "No Internet",
+            duration: "4000",
           });
-        } else {
-          setTimeout(() => {
-            setAnimate(false);
-          }, 3000);
         }
+      
+        
       }
+
     }
   };
 
@@ -148,6 +108,7 @@ const ForgotPassword = ({ navigation }) => {
 
       <View style={styles.resetBtnView}>
         <TouchableOpacity
+          onPress={handleReset}
           style={[
             tw`bg-red-500 border-4 border-red-500 border-solid rounded-full w-50   `,
             styles.resetBtn,
