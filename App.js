@@ -15,7 +15,7 @@ import MyOrders from "./screens/HomePageScreens/MyOrders";
 import Details from "./screens/OrderScreens/Details";
 import AsyncStorage from "@react-native-async-storage/async-storage/";
 import { YellowBox } from "react-native-web";
-
+import Top from "./screens/categories/Top.js";
 
 const Stack = createNativeStackNavigator();
 
@@ -92,6 +92,18 @@ export default function App() {
           component={Details}
           options={{
             headerTitle: "Order Details",
+            headerStyle: {
+              backgroundColor: "#111827",
+            },
+            headerTintColor: "white",
+            headerBackTitle: "",
+          }}
+        />
+        <Stack.Screen
+          name="Top"
+          component={Top}
+          options={{
+            headerTitle: "Tops",
             headerStyle: {
               backgroundColor: "#111827",
             },
